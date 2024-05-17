@@ -18,7 +18,7 @@ public class Blindness extends StandAction {
     protected void perform(World world, LivingEntity user, IStandPower power, ActionTarget target) {
         if (!world.isClientSide()) {
             if (!user.hasEffect(Effects.BLINDNESS)) {
-                user.addEffect(new EffectInstance(Effects.BLINDNESS, 99999999, 999999, false, false, true));
+                user.addEffect(new EffectInstance(Effects.BLINDNESS, 99999999, 0, false, false, true));
             } else {
                 user.removeEffect(Effects.BLINDNESS);
             }

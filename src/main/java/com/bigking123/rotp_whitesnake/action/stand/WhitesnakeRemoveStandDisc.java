@@ -33,10 +33,8 @@ public class WhitesnakeRemoveStandDisc extends StandEntityAction {
                 IStandPower.getStandPowerOptional(target).ifPresent(power -> {
                     if (power.hasPower()) {
                         Optional<StandInstance> previousDiscStand = power.putOutStand();
-                        MCUtil JojoModUtil;
-                        JojoModUtil = null;
                         previousDiscStand.ifPresent(prevStand ->
-                                JojoModUtil.giveItemTo(userPower.getUser(), StandDiscItem.withStand(new ItemStack(ModItems.STAND_DISC.get()), prevStand), true));
+                        MCUtil.giveItemTo(userPower.getUser(), StandDiscItem.withStand(new ItemStack(ModItems.STAND_DISC.get()), prevStand), true));
                     }
                 });
             }
